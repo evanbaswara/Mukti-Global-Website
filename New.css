@@ -1,3 +1,8 @@
+.col-12 {
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
 @font-face {
   font-family: 'GothamMedium';
   src: url('Gotham-Font/GothamMedium.ttf') format('truetype'); /* Sesuaikan dengan path dan format font yang digunakan */
