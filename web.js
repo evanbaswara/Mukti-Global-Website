@@ -288,8 +288,6 @@ function showDetail(clickedFont) {
 	  backText.style.opacity = "0";
     }
   }
-  event.preventDefault();
-  history.pushState(null, '', '/ShowDetailPage');
 }
 function showDetailFromImage(clickedImg) {
   var element = document.querySelector('.ShowProductDetail');
