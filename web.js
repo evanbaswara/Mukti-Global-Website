@@ -10,6 +10,7 @@ var ImgLocation = "product/TIMBANGAN_20230722_210503_";
 window.onload = function(){
 	
 	
+	
 	var images = ["img/jemtruk_0.png", "img/jemtruk_1.png", "img/jemtruk_2.png", "img/jemtruk_3.png", "img/jemtruk_4.png"]; 
 	
 	var topId = 1;
@@ -287,9 +288,10 @@ function showDetail(clickedFont) {
 	  backText.style.opacity = "0";
     }
   }
-  event.preventDefault();
-  history.pushState(null, '', '/ShowDetailPage');
+  history.pushState(null, '', 'Page-Show-Detail');
 }
+
+
 function showDetailFromImage(clickedImg) {
   var element = document.querySelector('.ShowProductDetail');
   var backText = document.querySelector('.HideDetail');
