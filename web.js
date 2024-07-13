@@ -277,7 +277,7 @@ function showDetail(clickedFont) {
 		  Detail_Status = 1;
 		  textProduct.textContent = changeDescriptionWithProductName(TextContent, false);
 		  backText.style.opacity = "100";
-		  history.pushState(detail, '', '/ShowDetailPage');
+		  history.pushState(null, '', '/ShowDetailPage');
 		}
     } 
 	else if (Detail_Status == 1) 
@@ -289,6 +289,24 @@ function showDetail(clickedFont) {
     }
   }
 }
+window.addEventListener('popstate', e => {
+    if (e.state) {
+        console.log(clickedFont.textContent); // Check the text content of the clicked font element
+		  var TextContent = clickedFont.textContent;
+		  element.classList.remove('hide');
+		  element.classList.add('show');
+		  Detail_Status = 1;
+		  textProduct.textContent = changeDescriptionWithProductName(TextContent, false);
+		  backText.style.opacity = "100";
+		  history.pushState(null, '', '/ShowDetailPage');
+    } else {
+        element.classList.remove('show');
+		element.classList.add('hide');
+		Detail_Status = 0;
+		backText.style.opacity = "0";
+    }
+});
+
 function showDetailFromImage(clickedImg) {
   var element = document.querySelector('.ShowProductDetail');
   var backText = document.querySelector('.HideDetail');
