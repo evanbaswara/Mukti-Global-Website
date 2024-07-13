@@ -277,7 +277,7 @@ function showDetail(clickedFont) {
 		  Detail_Status = 1;
 		  textProduct.textContent = changeDescriptionWithProductName(TextContent, false);
 		  backText.style.opacity = "100";
-		  history.pushState({ page: 'detail', product: TextContent }, '', '/ShowDetailPage');
+		  history.pushState(detail, '', '/ShowDetailPage');
 		}
     } 
 	else if (Detail_Status == 1) 
