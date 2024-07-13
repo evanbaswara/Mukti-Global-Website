@@ -288,7 +288,6 @@ function showDetail(clickedFont) {
 	  backText.style.opacity = "0";
     }
   }
-  history.pushState(null, '', 'Page-Show-Detail');
 }
 
 
