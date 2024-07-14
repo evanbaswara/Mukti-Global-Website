@@ -261,9 +261,9 @@ function showDetail(clickedFont) {
   var element = document.querySelector('.ShowProductDetail');
   var textProduct = document.querySelector('.DetailText_NAME');
   var backText = document.querySelector('.HideDetail');
-  
-  console.log(clickedFont.textContent); // Check the text content of the clicked font element
   var IsBack = clickedFont.textContent;
+
+  console.log(clickedFont.textContent); // Check the text content of the clicked font element
 	  
   if (element) {
     if (Detail_Status == 0) 
@@ -290,6 +290,11 @@ function showDetail(clickedFont) {
   }
 }
 window.addEventListener('popstate', e => {
+	var element = document.querySelector('.ShowProductDetail');
+  	var textProduct = document.querySelector('.DetailText_NAME');
+  	var backText = document.querySelector('.HideDetail');
+  	var IsBack = clickedFont.textContent;
+  
     if (e.state) {
         console.log(clickedFont.textContent); // Check the text content of the clicked font element
 		  var TextContent = clickedFont.textContent;
