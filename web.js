@@ -4,7 +4,7 @@ var katalogId = 1;
 var productName = "NONE";
 const MenuItems = document.querySelectorAll('a[href]');
 var ImgLocation = "product/TIMBANGAN_20230722_210503_";
-
+var contentShowDetail = "None";
 
 
 window.onload = function(){
@@ -278,6 +278,7 @@ function showDetail(clickedFont) {
 		  textProduct.textContent = changeDescriptionWithProductName(TextContent, false);
 		  backText.style.opacity = "100";
 		  history.pushState(null, '', '/ShowDetailPage');
+		  contentShowDetail = TextContent;
 		}
     } 
 	else if (Detail_Status == 1) 
@@ -293,26 +294,34 @@ window.addEventListener('popstate', e => {
 	var element = document.querySelector('.ShowProductDetail');
   	var textProduct = document.querySelector('.DetailText_NAME');
   	var backText = document.querySelector('.HideDetail');
-  	var IsBack = clickedFont.textContent;
   
-    if (e.state) {
-        console.log(clickedFont.textContent); // Check the text content of the clicked font element
-		  var TextContent = clickedFont.textContent;
-		  element.classList.remove('hide');
-		  element.classList.add('show');
-		  Detail_Status = 1;
-		  textProduct.textContent = changeDescriptionWithProductName(TextContent, false);
-		  backText.style.opacity = "100";
-		  history.pushState(null, '', '/ShowDetailPage');
-    } else {
-        element.classList.remove('show');
-		element.classList.add('hide');
-		Detail_Status = 0;
-		backText.style.opacity = "0";
+    if (e.state) 
+	{
+		if(contentShowDetail != "None")
+		{
+			console.log(contentShowDetail); // Check the text content of the clicked font element
+			var TextContent = contentShowDetail;
+			element.classList.remove('hide');
+			element.classList.add('show');
+			Detail_Status = 1;
+			textProduct.textContent = changeDescriptionWithProductName(TextContent, false);
+			backText.style.opacity = "100";
+			history.pushState(null, '', '/ShowDetailPage');
+		}
+    } 
+	else 
+	{
+		if(contentShowDetail != "None")
+		{
+			element.classList.remove('show');
+			element.classList.add('hide');
+			Detail_Status = 0;
+			backText.style.opacity = "0";
+		}
     }
 });
 
-function showDetailFromImage(clickedImg) {
+/*function showDetailFromImage(clickedImg) {
   var element = document.querySelector('.ShowProductDetail');
   var backText = document.querySelector('.HideDetail');
   var textProduct = document.querySelector('.DetailText_NAME');
@@ -344,7 +353,7 @@ function showDetailFromImage(clickedImg) {
 	  backText.style.opacity = "0";
     }
   }
-}
+}*/
 
 
 function socialMedia() {
