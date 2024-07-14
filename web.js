@@ -317,6 +317,7 @@ window.addEventListener('popstate', e => {
 			element.classList.add('hide');
 			Detail_Status = 0;
 			backText.style.opacity = "0";
+			history.replaceState(null, '', '');
 		}
     }
 });
