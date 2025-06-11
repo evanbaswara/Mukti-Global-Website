@@ -42,7 +42,7 @@ var contentShowDetail = "None";
 window.onload = function(){
 	
 	
-	var images = ["img/jemtruk_0.png", "img/jemtruk_1.png", "img/jemtruk_2.png", "img/jemtruk_3.png", "img/jemtruk_4.png"]; 
+	var images = ["img/JEMBATAN_TIMBANG_TRUK_MURAH_0.png", "img/JEMBATAN_TIMBANG_TRUK_MURAH_1.png", "img/JEMBATAN_TIMBANG_TRUK_MURAH_2.png", "img/JEMBATAN_TIMBANG_TRUK_MURAH_3.png", "img/JEMBATAN_TIMBANG_TRUK_MURAH_4.png"]; 
 	
 	var topId = 1;
 	var id = 1;
