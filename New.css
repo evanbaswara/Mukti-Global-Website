@@ -391,10 +391,14 @@ h2 {
 	display:flex;
 }
 header .listProduct {
-	display:flex;
+	display:grid;
 	justify-content:center;
 	align-items:center;
 	padding:10%;
+}
+.TitleProductDescription {
+    padding: inherit;
+    text-align: center;
 }
 .listProductText, .listProductImg {
 	display:flex;
